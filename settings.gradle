@@ -1,0 +1,3 @@
+include ':app', ':photoeditor'
+//Linese
+rootProject.name='Dagadu T-Shirt Design'
