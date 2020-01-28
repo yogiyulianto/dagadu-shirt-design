@@ -29,6 +29,8 @@ import android.view.animation.AnticipateOvershootInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.ablanco.zoomy.Zoomy;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -94,6 +96,8 @@ public class CreateDesignActivity extends BaseActivity implements OnPhotoEditorL
         LinearLayoutManager llmTools = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         mRvTools.setLayoutManager(llmTools);
         mRvTools.setAdapter(mEditingToolsAdapter);
+        Zoomy.Builder builder = new Zoomy.Builder(this).target(mPhotoEditorView);
+        builder.register();
 
 //        LinearLayoutManager llmFilters = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
 //        mRvFilters.setLayoutManager(llmFilters);
